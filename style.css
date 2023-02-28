@@ -121,7 +121,7 @@ header figure {
   animation: notification 2s infinite;
 }
 
-.quotes {
+.container-values {
   margin: 2.5rem 0;
 }
 
@@ -137,7 +137,7 @@ section h3 {
   background-color: var(--line);
 }
 
-.quotes-content {
+.content {
   display: grid;
   gap: 1.25rem;
 }
@@ -277,7 +277,7 @@ footer {
     animation: notification 2s infinite;
   }
 
-  .quotes {
+  .container-values {
     margin: 2.5rem 0;
   }
 
@@ -292,7 +292,7 @@ footer {
     background-color: var(--line);
   }
 
-  .quotes-content {
+  .content {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
