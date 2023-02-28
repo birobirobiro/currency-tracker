@@ -54,6 +54,8 @@ nav ul img {
 
 li {
   list-style: none;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
 }
 
 li:hover {
@@ -212,5 +214,112 @@ footer {
 
   100% {
     box-shadow: 0 0 5px 2px var(--notification);
+  }
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    padding: 1.875rem 2.5rem;
+  }
+
+  nav {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
+  header {
+    padding: 1rem 2.5rem;
+  }
+
+  header h1 {
+    font-size: 3.125rem;
+    line-height: 3.125rem;
+  }
+
+  header span {
+    font-size: 1rem;
+    line-height: 1.875rem;
+    min-width: 15.625rem;
+  }
+
+  header .hero {
+    display: flex;
+    align-items: center;
+  }
+
+  header figure {
+    display: block;
+    margin-left: 1.25rem;
+  }
+
+  header figure img {
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+
+  .update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+  }
+
+  .update p {
+    font-size: 1rem;
+  }
+
+  .notification {
+    width: 0.6875rem;
+    height: 0.6875rem;
+    background-color: var(--notification);
+    border-radius: 50%;
+    animation: notification 2s infinite;
+  }
+
+  .quotes {
+    margin: 2.5rem 0;
+  }
+
+  section h3 {
+    font-size: 1.125rem;
+  }
+
+  .line {
+    margin: 0.5rem 0;
+    width: 100%;
+    height: 0.0313rem;
+    background-color: var(--line);
+  }
+
+  .quotes-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .cards {
+    display: flex;
+    background-color: var(--card-background);
+    border-radius: 0.1875rem;
+    border: 0.38px solid var(--line);
+    padding: 0.625rem 0.75rem;
+    width: 100%;
+    gap: 0.625rem;
+    align-items: center;
+  }
+
+  .cards div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards .card-title,
+  .cards .card-value {
+    font-size: 1rem;
+  }
+
+  .cards img {
+    width: 3rem;
+    height: 3rem;
   }
 }
