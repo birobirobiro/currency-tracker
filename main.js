@@ -18,7 +18,7 @@ function fetchData() {
       const currencies = results.currencies;
 
       Object.entries(stocks).map(([key, value], index) => {
-        [...cardValueStocks].map((element) => {
+        [...cardValuesStocks].map((element) => {
           const id = element.dataset.id;
           if (id === key) {
             cardValuesStocks[index].textContent = value.variation + "%";
@@ -27,7 +27,7 @@ function fetchData() {
       });
 
       Object.entries(currencies).map(([key, value], index) => {
-        [...cardValueQuotes].map((element) => {
+        [...cardValuesQuotes].map((element) => {
           const id = element.dataset.id;
           if (id === key) {
             cardValuesQuotes[index - 1].textContent = value.buy.toLocaleString(
