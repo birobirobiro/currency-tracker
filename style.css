@@ -5,17 +5,17 @@
 }
 
 :root {
-  --text-color-primary: #FFF;
-  --text-color-secondary: #D9D9D9;
-  --text-color-terciary: #A7B2C3;
+  --text-color-primary: #fff;
+  --text-color-secondary: #d9d9d9;
+  --text-color-terciary: #a7b2c3;
   --background: #030304;
-  --notification: #00BC4F;
+  --notification: #00bc4f;
   --card-background: #202025;
   --line: #474747;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--text-color-primary);
   background-color: var(--background);
   width: 100%;
@@ -69,7 +69,9 @@ header {
   padding: 1rem 7.25rem;
 
   background: rgb(18, 18, 18);
-  background: linear-gradient(45deg, rgba(18, 18, 18, 1) 30%, rgba(36, 121, 64, 0.5) 80%);
+  background: linear-gradient(45deg,
+      rgba(18, 18, 18, 1) 30%,
+      rgba(36, 121, 64, 0.5) 80%);
 }
 
 header h1 {
@@ -77,8 +79,8 @@ header h1 {
   font-weight: 600;
   line-height: 2.1875rem;
 
-  background: #00CE2C;
-  background: linear-gradient(to right, #00CE2C 15%, #AEDF23 57%, #A3DC00 80%);
+  background: #00ce2c;
+  background: linear-gradient(to right, #00ce2c 15%, #aedf23 57%, #a3dc00 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -216,7 +218,6 @@ footer {
     box-shadow: 0 0 5px 2px var(--notification);
   }
 }
-
 
 @media (min-width: 768px) {
   .container {
