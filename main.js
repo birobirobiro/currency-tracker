@@ -2,7 +2,7 @@ const cardValuesQuotes = document.querySelectorAll('.quotes .cards .card-value')
 const cardValuesStocks = document.querySelectorAll('.stocks .cards .card-value');
 
 function fetchData() {
-  fetch('https://cors-anywhere.herokuapp.com/https://api.hgbrasil.com/finance?key=c38d9f1a')
+  fetch('https://cors-everywhere.onrender.com/https://api.hgbrasil.com/finance?key=c38d9f1a')
     .then(response => response.json())
     .then(data => {
       const results = data.results;
