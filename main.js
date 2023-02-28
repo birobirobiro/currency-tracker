@@ -14,6 +14,11 @@ function fetchData() {
           const id = element.dataset.id;
           if (id === key) {
             element.textContent = `${value.variation.toFixed(2)}%`;
+            if (value.variation < 0) {
+              element.classList.add("negative");
+            } else {
+              element.classList.remove("negative");
+            }
           }
         });
       });
