@@ -1,9 +1,8 @@
-const cardTitleQuotes = document.querySelectorAll(".quotes .cards .card-title");
+
 const cardValuesQuotes = document.querySelectorAll(
   ".quotes .cards .card-value"
 );
 
-const cardTitleStocks = document.querySelectorAll(".stocks .cards .card-title");
 const cardValuesStocks = document.querySelectorAll(
   ".stocks .cards .card-value"
 );
@@ -22,10 +21,6 @@ function fetchData() {
         [...cardTitleStocks].map((element) => {
           const id = element.dataset.id;
           if (id === key) {
-            value.name === "Índice de Fundos de Investimentos Imobiliários B3"
-              ? (cardTitleStocks[1].innerHTML = "IFIX")
-              : (cardTitleStocks[index].textContent = value.name);
-
             cardValuesStocks[index].textContent = value.variation + "%";
           }
         });
@@ -35,10 +30,6 @@ function fetchData() {
         [...cardTitleQuotes].map((element) => {
           const id = element.dataset.id;
           if (id === key) {
-            value.name === "Renminbi"
-              ? (cardTitleQuotes[7].innerHTML = "Chinese Yuan")
-              : cardTitleQuotes[index - 1].textContent = value.name;
-
             cardValuesQuotes[index - 1].textContent = value.buy.toLocaleString(
               "pt-BR",
               { style: "currency", currency: "BRL" }
