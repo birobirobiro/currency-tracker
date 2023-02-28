@@ -12,6 +12,7 @@
   --notification: #00bc4f;
   --card-background: #202025;
   --line: #474747;
+  --negative: #ff5555;
 }
 
 body {
@@ -173,6 +174,10 @@ section h3 {
 .cards .card-value {
   font-size: 0.875rem;
   color: var(--text-color-terciary);
+}
+
+.negative {
+  color: var(--negative) !important;
 }
 
 footer {
