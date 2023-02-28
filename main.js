@@ -30,7 +30,7 @@ function fetchData() {
         [...cardValuesQuotes].map((element) => {
           const id = element.dataset.id;
           if (id === key) {
-            cardValuesQuotes[index].textContent = value.buy.toLocaleString(
+            cardValuesQuotes[index - 1].textContent = value.buy.toLocaleString(
               "pt-BR",
               { style: "currency", currency: "BRL" }
             );
