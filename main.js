@@ -1,59 +1,57 @@
-
-const cardValuesQuotes = document.querySelectorAll(
-  ".quotes .cards .card-value"
-);
-
-const cardValuesStocks = document.querySelectorAll(
-  ".stocks .cards .card-value"
-);
+const cardValuesQuotes = document.querySelectorAll('.quotes .cards .card-value');
+const cardValuesStocks = document.querySelectorAll('.stocks .cards .card-value');
 
 function fetchData() {
-  fetch(
-    `https://cors-everywhere.onrender.com/https://api.hgbrasil.com/finance?key=c38d9f1a`
-  )
-    .then((response) => response.json())
-    .then((data) => {
+  fetch('https://cors-anywhere.herokuapp.com/https://api.hgbrasil.com/finance?key=c38d9f1a')
+    .then(response => response.json())
+    .then(data => {
       const results = data.results;
       const stocks = results.stocks;
       const currencies = results.currencies;
 
-      Object.entries(stocks).map(([key, value], index) => {
-        [...cardValuesStocks].map((element) => {
+      Object.entries(stocks).forEach(([key, value]) => {
+        cardValuesStocks.forEach(element => {
           const id = element.dataset.id;
           if (id === key) {
-            cardValuesStocks[index].textContent = value.variation + "%";
+            element.textContent = `${value.variation.toFixed(2)}%`;
           }
         });
       });
 
-      Object.entries(currencies).map(([key, value], index) => {
-        [...cardValuesQuotes].map((element) => {
-          const id = element.dataset.id;
-          if (id === key) {
-            cardValuesQuotes[index - 1].textContent = value.buy.toLocaleString(
-              "pt-BR",
-              { style: "currency", currency: "BRL" }
-            );
-          }
-        });
+      Object.entries(currencies).forEach(([key, value], index) => {
+        if (index > 0) {
+          cardValuesQuotes.forEach(element => {
+            const id = element.dataset.id;
+            if (id === key) {
+              element.textContent = value.buy.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+              });
+            }
+          });
+        }
       });
+    })
+    .catch(error => {
+      console.error(error);
     });
 }
 
-// Display current date and time
 function displayDate() {
-  const dateHourElem = document.getElementById("date-hour");
+  const dateHourElem = document.getElementById('date-hour');
   const now = new Date();
-  const formattedDate = now.toLocaleString("pt-BR", { dateStyle: "short" });
-  const formattedTime = now.toLocaleString("pt-BR", { timeStyle: "short" });
+  const formattedDate = now.toLocaleDateString('pt-BR', {
+    day: 'numeric',
+    month: 'numeric',
+    year: 'numeric'
+  });
+  const formattedTime = now.toLocaleTimeString('pt-BR', {
+    hour: 'numeric',
+    minute: 'numeric'
+  });
   dateHourElem.textContent = `Atualizado em: ${formattedDate} às ${formattedTime}`;
 }
 
-// Call fetchData() immediately
 fetchData();
-
-// Call fetchData() every hour (in milliseconds)
 setInterval(fetchData, 3600000);
-
-// Update the date and time display every second
 setInterval(displayDate, 1000);
