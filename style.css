@@ -25,6 +25,9 @@ body {
 
 .container {
   padding: 1.875rem 1.75rem;
+
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 a {
@@ -70,9 +73,11 @@ header {
   padding: 1rem 7.25rem;
 
   background: rgb(18, 18, 18);
-  background: linear-gradient(45deg,
-      rgba(18, 18, 18, 1) 30%,
-      rgba(36, 121, 64, 0.5) 80%);
+  background: linear-gradient(
+    45deg,
+    rgba(18, 18, 18, 1) 30%,
+    rgba(36, 121, 64, 0.5) 80%
+  );
 }
 
 header h1 {
