@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}{% endblock %}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <link href="/static/geral/css/base.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="/static/dashboard/img/dollar-icon.svg" type="image/svg" />
+
+  <script defer src="/static/dashboard/js/main.js"></script>
+  {% block 'head' %}{% endblock %}
+
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <img src="/static/dashboard/img/logo.svg" alt="logo" />
+
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Conversor</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="hero">
+      <div class="title">
+        <h1>Currency</h1>
+        <h1>Tracker</h1>
+
+        <span>Cotacão do dólar e outras moedas internacionais.</span>
+      </div>
+
+      <figure>
+        <img src="/static/dashboard/img/logo.svg" alt="logo" />
+      </figure>
+    </div>
+  </header>
+  {% block 'body' %}{% endblock%}
+
+      
+</body>
+
+</html>

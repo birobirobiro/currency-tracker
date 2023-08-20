@@ -1,51 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+{% extends "bases/base.html" %}
+{% block 'body' %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Currency Tracker</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
-
-  <link rel="shortcut icon" href="./assets/dollar-icon.svg" type="image/svg" />
-
-  <script defer src="./main.js"></script>
-</head>
-
-<body>
-  <nav>
-    <ul>
-      <img src="./assets/logo.svg" alt="logo" />
-
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Conversor</a></li>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Contato</a></li>
-    </ul>
-  </nav>
-
-  <header>
-    <div class="hero">
-      <div class="title">
-        <h1>Currency</h1>
-        <h1>Tracker</h1>
-
-        <span>Cotacão do dólar e outras moedas internacionais.</span>
-      </div>
-
-      <figure>
-        <img src="./assets/logo.svg" alt="logo" />
-      </figure>
-    </div>
-  </header>
-
-  <div class="container">
+<div class="container">
     <div class="update">
       <span class="notification"></span>
 
@@ -57,7 +13,7 @@
       <div class="line"></div>
       <div class="content">
         <div class="cards">
-          <img src="./assets/stock-icon.svg" alt="bovespa" />
+          <img src="/static/dashboard/img/stock-icon.svg" alt="bovespa" />
 
           <div data-id="IBOVESPA">
             <span class="card-title">Índice Bovespa</span>
@@ -66,7 +22,7 @@
         </div>
 
         <div class="cards" data-id="IFIX">
-          <img src="./assets/stock-icon.svg" alt="IFIX" />
+          <img src="/static/dashboard/img/stock-icon.svg" alt="IFIX" />
 
           <div>
             <span class="card-title">IFIX</span>
@@ -75,7 +31,7 @@
         </div>
 
         <div class="cards" data-id="CAC">
-          <img src="./assets/stock-icon.svg" alt="cac" />
+          <img src="/static/dashboard/img/stock-icon.svg" alt="cac" />
 
           <div>
             <span class="card-title">CAC</span>
@@ -84,7 +40,7 @@
         </div>
 
         <div class="cards" data-id="DOWJONES">
-          <img src="./assets/stock-icon.svg" alt="DOWJONES" />
+          <img src="/static/dashboard/img/stock-icon.svg" alt="DOWJONES" />
 
           <div>
             <span class="card-title">DOWJONES</span>
@@ -93,7 +49,7 @@
         </div>
 
         <div class="cards" data-id="NASDAQ">
-          <img src="./assets/stock-icon.svg" alt="NASDAQ" />
+          <img src="/static/dashboard/img/stock-icon.svg" alt="NASDAQ" />
 
           <div>
             <span class="card-title">NASDAQ</span>
@@ -102,7 +58,7 @@
         </div>
 
         <div class="cards" data-id="NIKKEI">
-          <img src="./assets/stock-icon.svg" alt="NIKKEI" />
+          <img src="/static/dashboard/img/stock-icon.svg" alt="NIKKEI" />
 
           <div>
             <span class="card-title">NIKKEI</span>
@@ -117,7 +73,7 @@
       <div class="line"></div>
       <div class="content">
         <div class="cards" data-id="USD">
-          <img src="./assets/dollar-icon.svg" alt="Dólar" />
+          <img src="/static/dashboard/img/dollar-icon.svg" alt="Dólar" />
 
           <div>
             <span class="card-title">Dólar</span>
@@ -126,7 +82,7 @@
         </div>
 
         <div class="cards" data-id="CAD">
-          <img src="./assets/canadian-dollar-icon.svg" alt="Dólar Canadense" />
+          <img src="/static/dashboard/img/canadian-dollar-icon.svg" alt="Dólar Canadense" />
 
           <div>
             <span class="card-title">Dólar Canadense</span>
@@ -135,7 +91,7 @@
         </div>
 
         <div class="cards" data-id="AUD">
-          <img src="./assets/australian-dollar-icon.svg" alt="Dólar Australiano" />
+          <img src="/static/dashboard/img/australian-dollar-icon.svg" alt="Dólar Australiano" />
 
           <div>
             <span class="card-title">Dólar Australiano</span>
@@ -144,7 +100,7 @@
         </div>
 
         <div class="cards" data-id="EUR">
-          <img src="./assets/euro-icon.svg" alt="Euro" />
+          <img src="/static/dashboard/img/euro-icon.svg" alt="Euro" />
 
           <div>
             <span class="card-title">Euro</span>
@@ -153,7 +109,7 @@
         </div>
 
         <div class="cards" data-id="GBP">
-          <img src="./assets/libra-icon.svg" alt="Libra" />
+          <img src="/static/dashboard/img/libra-icon.svg" alt="Libra" />
 
           <div>
             <span class="card-title">Libra</span>
@@ -162,7 +118,7 @@
         </div>
 
         <div class="cards" data-id="ARS">
-          <img src="./assets/peso-argentino.svg" alt="Peso Argentino" />
+          <img src="/static/dashboard/img/peso-argentino.svg" alt="Peso Argentino" />
 
           <div>
             <span class="card-title">Peso Argentino</span>
@@ -171,7 +127,7 @@
         </div>
 
         <div class="cards" data-id="JPY">
-          <img src="./assets/yen-icon.svg" alt="Yen" />
+          <img src="/static/dashboard/img/yen-icon.svg" alt="Yen" />
 
           <div>
             <span class="card-title">Yen</span>
@@ -180,7 +136,7 @@
         </div>
 
         <div class="cards" data-id="CNY">
-          <img src="./assets/yuan-icon.svg" alt="Yuan" />
+          <img src="/static/dashboard/img/yuan-icon.svg" alt="Yuan" />
 
           <div>
             <span class="card-title">Yuan</span>
@@ -189,20 +145,18 @@
         </div>
 
         <div class="cards" data-id="BTC">
-          <img src="./assets/bitcoin-icon.svg" alt="Bitcoin" />
+          <img src="/static/dashboard/img/bitcoin-icon.svg" alt="Bitcoin" />
 
           <div>
             <span class="card-title">Bitcoin</span>
-            <span class="card-value" data-id="BTC">-</span>
+            <span class="card-value">R$ {{bitcoin}}</span>
           </div>
         </div>
       </div>
     </section>
 
     <footer>
-      <a href="https://birobirobiro.dev" target="_blank">birobirobiro.dev</a>
+      <a href="https://birobirobiro.dev" target="_blank"></a>
     </footer>
   </div>
-</body>
-
-</html>
+{% endblock%}
